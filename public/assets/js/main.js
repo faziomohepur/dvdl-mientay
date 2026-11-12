@@ -64,3 +64,14 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+  // Chặn chuột phải
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // Chặn các phím tắt F12, Ctrl+U, Ctrl+Shift+I
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && e.key === 'U')) {
+      e.preventDefault();
+    }
+  });
+         /* End Anti Copy Source  */
